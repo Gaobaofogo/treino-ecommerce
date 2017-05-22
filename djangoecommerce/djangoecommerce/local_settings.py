@@ -36,3 +36,7 @@ EMAIL_HOST = ''
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 DEFAULT_FROM_EMAIL = 'admin@djangoecommerce.com'
+
+# AUTH
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'index'
