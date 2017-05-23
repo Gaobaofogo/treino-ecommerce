@@ -15,6 +15,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     #apps
+    'accounts',
     'core',
     'catalog',
 
@@ -40,3 +41,9 @@ DEFAULT_FROM_EMAIL = 'admin@djangoecommerce.com'
 # AUTH
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'index'
+LOGOUT_URL = 'logout'
+AUTH_USER_MODEL = 'accounts.User'
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'accounts.backends.ModelBackend',
+)
