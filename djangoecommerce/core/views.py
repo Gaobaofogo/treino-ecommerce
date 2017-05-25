@@ -9,6 +9,7 @@ from django.core.urlresolvers import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import View, TemplateView, CreateView
 from django.contrib.auth import get_user_model
+from django.contrib import messages
 
 from .forms import ContactForm
 
@@ -28,6 +29,8 @@ def contact(request):
 		form.envio_de_email()
 		success = True
 		form = ContactForm()
+	elif request.method == 'POST':
+		messages.error(request, 'Formulário inválido')
 	context = {
 		'form': form,
 		'success': success,
