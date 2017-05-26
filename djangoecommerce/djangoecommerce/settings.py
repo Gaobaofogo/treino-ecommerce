@@ -48,6 +48,9 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    #APPS
+    'checkout.middleware.CartItemMiddleware'
 ]
 
 ROOT_URLCONF = 'djangoecommerce.urls'
